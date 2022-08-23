@@ -6,11 +6,22 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-for(int i = 2; i <= number; i += 2)
+// Первый способ
+for (int i = 2; i <= number; i += 2)
 {
-     Console.Write($"{i} ");
+    Console.Write($"{i} ");
 }
 
+// Второй способ
+// for (int i = 1; i <= number; i++)
+// {
+//     if (i % 2 == 0)
+//     {
+//         Console.Write($"{i} ");
+//     }
+// }
+
+// Третий способ (только для положительных чисел)
 // foreach(var x in Enumerable.Range(1, number))
 // {
 //     if(x % 2 == 0)
@@ -18,5 +29,3 @@ for(int i = 2; i <= number; i += 2)
 //         Console.Write($"{x} ");
 //     }
 // }
-
-// а если я введу негативное число ? да и вообще тут for лучше подойдет
