@@ -13,3 +13,5 @@ foreach(var x in Enumerable.Range(1, number))
         Console.Write($"{x} ");
     }
 }
+
+// а если я введу негативное число ? да и вообще тут for лучше подойдет
