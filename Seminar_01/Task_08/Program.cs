@@ -6,12 +6,17 @@
 Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-foreach(var x in Enumerable.Range(1, number))
+for(int i = 2; i <= number; i += 2)
 {
-    if(x % 2 == 0)
-    {
-        Console.Write($"{x} ");
-    }
+     Console.Write($"{i} ");
 }
+
+// foreach(var x in Enumerable.Range(1, number))
+// {
+//     if(x % 2 == 0)
+//     {
+//         Console.Write($"{x} ");
+//     }
+// }
 
 // а если я введу негативное число ? да и вообще тут for лучше подойдет
