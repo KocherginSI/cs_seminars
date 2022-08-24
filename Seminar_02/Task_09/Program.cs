@@ -1,36 +1,30 @@
 ﻿using System;
 
-namespace Task_10;
-
-class Program
+namespace Task_09
 {
-    static void Main(string[] args)
+    class Program
     {
-        System.Console.WriteLine("Hello World!");
+        static void Main(string[] args)
+        {
+            System.Console.WriteLine("Hello World!");
+        }
+
+        static int MaxNumber()
+        {
+            int number1 = new Random().Next(10, 1000);
+            int max = 0;
+            int iterator = number1;
+
+            while (iterator != 0)
+            {
+                int number2 = iterator % 10;
+
+                if (number2 > max) max = number2;
+
+                iterator /= 10;
+
+            }
+        }
     }
 
-    static int MaxNumber()
-    {
-        int number = new Random() .Next(10, 1000);
-        int max = 0;
-    }
 }
-
-
-
-
-
-// int number = new Random() .Next(10, 99);
-// int firstDigit = number % 10;
-// int secondDigit = number / 10;
-
-// System.Console.WriteLine(firstDigit);
-// System.Console.WriteLine(secondDigit);
-// if (firstDigit > secondDigit)
-// {
-//     System.Console.WriteLine(firstDigit);
-// }
-// else
-// {
-//     System.Console.WriteLine($"Max: {secondDigit}");
-// }
