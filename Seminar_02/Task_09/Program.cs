@@ -6,12 +6,13 @@ namespace Task_09
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello World!");
+            System.Console.WriteLine(MaxNumber());
         }
+
 
         static int MaxNumber()
         {
-            int number1 = new Random().Next(10, 1000);
+            int number1 = new Random().Next(10, 100000);
             int max = 0;
             int iterator = number1;
 
@@ -24,7 +25,14 @@ namespace Task_09
                 iterator /= 10;
 
             }
+            
+            System.Console.WriteLine($"Случайное число: {number1}");
+            System.Console.Write("Максимальная цифра числа: ");
+
+            return max;
+
         }
+        
     }
 
 }
