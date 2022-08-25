@@ -11,13 +11,16 @@ namespace Task_13
             System.Console.WriteLine("78 -> третьей цифры нет");
             System.Console.WriteLine("32679 -> 6");
             System.Console.WriteLine();
-            ThirdNumber();
-        }
-
-        static void ThirdNumber()
-        {
+            
             System.Console.Write("Введите число: ");
             int number = Convert.ToInt32(Console.ReadLine());
+            
+            ThirdNumber(number);
+        }
+
+        static void ThirdNumber(int number)
+        {
+            
             int numberTemp = number;
             int digitCounter = 0;
             int lastDigit = 0;
@@ -36,13 +39,13 @@ namespace Task_13
             }
             else
             {
-                while (digitCounter >= 3) 
+                while (digitCounter >= 3)
                 {
                     thirdNumber = number % 10;
                     number /= 10;
                     --digitCounter;
 
-                } 
+                }
                 System.Console.WriteLine($"thirdNumber -> {thirdNumber}");
             }
         }
