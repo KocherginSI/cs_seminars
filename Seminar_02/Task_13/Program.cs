@@ -14,38 +14,37 @@ namespace Task_13
             ThirdNumber();
         }
 
-        static int ThirdNumber()
+        static void ThirdNumber()
         {
             System.Console.Write("Введите число: ");
-            int number = Convert.ToInt32(Console.Read());
-            int[] array = {};
-            int thirdNumber = 0;
+            int number = Convert.ToInt32(Console.ReadLine());
+            int numberTemp = number;
+            int digitCounter = 0;
             int lastDigit = 0;
+            int thirdNumber = 0;
 
-            while (number >= 10)
+            while (numberTemp > 0)
             {
-                lastDigit = number % 10;
-                array = new int[lastDigit];
-                number -= lastDigit;
-
+                lastDigit = numberTemp % 10;
+                digitCounter++;
+                numberTemp /= 10;
             }
-            
-            Console.WriteLine($"Length: {array.Length}");
-            foreach (int item in array) Console.WriteLine(item);
 
-
-            if (array.Length < 2)
+            if (digitCounter < 3)
             {
                 System.Console.WriteLine($"-> Третьей цифры нет.");
             }
             else
             {
-                thirdNumber = array[1];
-                System.Console.WriteLine($"-> {thirdNumber}");
+                while (digitCounter >= 3) 
+                {
+                    thirdNumber = number % 10;
+                    number /= 10;
+                    --digitCounter;
+
+                } 
+                System.Console.WriteLine($"thirdNumber -> {thirdNumber}");
             }
-
-            return thirdNumber;
-
         }
     }
 }
