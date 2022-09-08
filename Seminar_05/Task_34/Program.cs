@@ -4,7 +4,7 @@
 
 using System;
 
-namespace Task_29
+namespace Task_34
 {
     class Program
     {
@@ -40,8 +40,6 @@ namespace Task_29
             
             
         }
-
-
 
 
     }
