@@ -13,11 +13,11 @@ namespace Task_34
             System.Console.WriteLine("Введите количество элементов массива:");
             int arrayLength = Convert.ToInt32(Console.ReadLine());
             
-            RandomArray(arrayLength);
+            RandomArrayCount(arrayLength);
         }
 
 
-        static void RandomArray(int arrayLength)
+        static void RandomArrayCount(int arrayLength)
         {
             int[] array = new int[arrayLength];
             int index = 0;
